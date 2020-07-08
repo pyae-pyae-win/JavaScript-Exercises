@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial scale=1.0">
+    <style>
+        .style{
+            border:1px solid grey;
+            width: 170px;
+            height: 200px;
+            background-color: gainsboro;
+            padding-left: 40px;
+            padding-top: 70px;
+            margin-left: 60px;
+            margin-top: 60px;
+        }
+    </style>
+    <body>
+        <div class="style">
+            Enter Date:<br><br>
+            <input type="date" id="date"><br><br>
+            <button type="button" onclick="chooseDate()">Click Me</button>
+        </div>
+        <script>
+            function chooseDate(){
+                var ndate= new Date();
+                var currentyear = ndate.getFullYear();
+                var cdate = document.getElementById("date").value;
+                var date1= new Date(cdate);
+                var inyear = date1.getFullYear();
+                var ans = currentyear-inyear;
+                if(ans>18){
+                    window.alert("You are over 18");
+                }
+                else{
+                    window.alert("You are under 18");
+                }
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        .style{
+            border: 1px solid gainsboro;
+            background-color: ghostwhite;
+            width: 300px;
+            height: 300px;
+            padding-left: 50px;
+            margin: 40px;
+        }
+    </style>
+    <body>
+        <div class="style">
+            <p>Enter First Number:</p>
+            <input type="text" id="num1" placeholder="enter number">
+            <p>Enter Second Number:</p>
+            <input type="text" id="num2" placeholder="enter number"><br><br>
+            <button type="button" onclick="calculate()">calculate</button>
+            <input type="text" id="res">
+        </div>
+        <script>
+            function calculate(){
+                var pro = prompt("Please Enter Button");(
+                var result;
+                var n1 = parseInt(document.getElementById("num1").value);
+                var n2 = parseInt(document.getElementById("num2").value);
+                switch(pro){
+                    case "+":result=n1+n2;
+                    break;
+                    case "-":result=n1-n2;
+                    break;
+                    case "*":result=n1*n2;
+                    break;
+                    case "/":result=n1/n2;
+                    break;
+                    default:result="not found";
+                }
+                document.getElementById("res").value=result;
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <form>
+            Number 1: <input type="text" name="Name" id="num1"><br><br>
+            Number 2: <input type="text" name="Name" id="num2"><br><br>
+            <button type="button" onclick="chooseNum()">Click Me</button>
+        </form>
+        <label id="result"></label>
+        <script>
+            function chooseNum(){
+                var n1=parseInt(document.getElementById("num1").value);
+                var n2=parseInt(document.getElementById("num2").value);
+                for(var n=n1;n<=n2;n++){
+                    if(n==0){
+                        document.getElementById("result").innerHTML+=n+" "+"is even number."+"<br>";
+                    }
+                    else if(n%2==0){
+                        document.getElementById("result").innerHTML+=n+" "+"is even number."+"<br>";
+                    }
+                    else{
+                        document.getElementById("result").innerHTML+=n+" "+"is odd number."+"<br>";
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>
